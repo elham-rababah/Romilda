@@ -1,4 +1,4 @@
-# Project Name #
+# Memorize  #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -17,22 +17,23 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > Memorize your memory   
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > It will be for every one to save his memory and to share it with other 
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-
+  > The memorize is a website for store and save your messages and your memory or to send it or share it with friends
+  
 ## Problem ##
-  > Describe the problem your product solves.
+  > The traditional way to store your data is not secure , because the book could be worn off damage or lost 
+  
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > Our product will save all of your memory in one save place 
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > It will be your best friend .
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
