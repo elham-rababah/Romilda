@@ -1,31 +1,19 @@
-<!DOCTYPE html>
-<html ng-app='memorize'>
-  <head>
-    <meta charset="utf-8" />
-    <title>memorize</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-  </head>
+<doctype! html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/style.css" />
+</head>
   <body>
-    <h1>memorize</h1>
-   <div class='navigation'>
-  <ul>
-    <li><a href='#/frinds' class='frinds'>Frindes</a></li>
-    <li><a href='#/notes' class='notes'>Notes</a></li>
-    <li><a href='#/search' class='search'>search</a></li>
-    <li><a href="#/logout" class="logout" style=""> logout</a></li>
-  </ul>
-   
+  <h1>Memoriz</h1>
+  <div class="navigation">
+    <ul>
+      <li><a href="#/frined">frined</a></li>
+      <li><a href="#/notes">notes</a></li>
+    </ul>
   </div>
-    <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <div ng-view></div>
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
-    <!--  <script src="../server/links/linkController.js"></script> -->
-    <script src="app/auth/auth.js"></script>
+
+
     <script src="app/frined/frined.js"></script>
-    <script src="app/notes/notes.js"></script>
-    <script src="app/search/search.js"></script>
-    <script src="app/app.js"></script>
   </body>
 </html>
