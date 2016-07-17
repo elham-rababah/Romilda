@@ -1,10 +1,11 @@
-angular.model('memories.notes',[])
+angular.module('Memories.notes',[])
 
 .controller('NotesController',function( $scope , Notes ) {
 	$scope.Notes={};
-	
-	var Save=function($scope.memo){
-		Notes.saveMemo($scope.memo).then(function(resp){
+	var value=$scope.memo;
+	var Save=function(value){
+		Notes.saveMemo(value)
+		.then(function(resp){
 			resp.data=$scope.memo;
 		})
 	}

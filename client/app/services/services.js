@@ -1,4 +1,5 @@
-angular.module('memories.services',[])
+angular.module('Memories.services',[])
+
 .factory('Notes',function($http){
 	var saveMemo=function(memo){
 		return $http({
@@ -10,7 +11,6 @@ angular.module('memories.services',[])
 			return resp;
 		});
 	};
-
 	return{
 		saveMemo:saveMemo
 	};
