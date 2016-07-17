@@ -3,5 +3,5 @@
 
  var Freinds=new db.Collection();
 
- Freinds.models=Freind;
+ Freinds.model=Freind;
  module.exports=Freinds;
