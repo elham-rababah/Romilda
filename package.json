@@ -1,0 +1,20 @@
+{
+  "name": "memorize",
+  "version": "1.0.0",
+  "description": "it memorize online note book",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ibrahimtamimi/Romilda.git"
+  },
+  "author": "ibrahimTamimi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibrahimtamimi/Romilda/issues"
+  },
+  "homepage": "https://github.com/ibrahimtamimi/Romilda#readme"
+}
