@@ -32,13 +32,13 @@ db.knex.schema.hasTable('users').then(function(exists) {
   }
 });
 
-db.knex.schema.hasTable('masseges').then(function(exists) {
+db.knex.schema.hasTable('messeges').then(function(exists) {
   if (!exists) {//references('authors.id')
-    db.knex.schema.createTable('masseges', function (masseges) {
-      masseges.increments('id').primary();;
-      masseges.string('username', 255).references('users.username');
-      masseges.string('content', 255);
-      masseges.timestamps('date').defaultTo(knex.fn.now());
+    db.knex.schema.createTable('messeges', function (messeges) {
+      messeges.increments('id').primary();;
+      messeges.string('username', 255).references('users.username');
+      messeges.string('content', 255);
+      messeges.timestamps('date').defaultTo(knex.fn.now());
       
 
     }).then(function (table) {
