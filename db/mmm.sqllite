@@ -1,0 +1,6 @@
+CREATE TABLE user(username string  PRIMARY KEY ,name , pasword);
+CREATE TABLE masseges(id integr  PRIMARY KEY ,concat ,username string , FOREIGN KEY(username) REFERENCES user(username))
+;
+CREATE TABLE friend(firstside string ,secondside string ,PRIMARY KEY (secondside, firstside) , FOREIGN KEY(firstside) REFERENCES user(username), 
+ FOREIGN KEY(secondside) REFERENCES user(username))
+;
