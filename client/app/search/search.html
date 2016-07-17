@@ -1,0 +1,21 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+
+<div class="search">
+	<div id="Note">
+		<select ng-model="selectItem">
+		  <option value="Descending">Descending oreder</option>
+		  <option value="Ascending">Ascending order</option>
+		</select>
+		<div ng-repeat="note in Notes">
+			<div ng-click="getNote()">{{ note | orderBy:'-date'}}</div>
+				<div>{{Note}}</div>
+		</div>
+	</div>
+	<div id="Friend">
+		<input type="text" ng-model="searchFriend">
+		<div ng-repeat="friend in Friends | filter:searchFriend">
+			<div ng-click="getFriend()">{{friend}}</div>
+				<div>{{Friend}}</div>
+		</div> 
+	</div>
+</div>
