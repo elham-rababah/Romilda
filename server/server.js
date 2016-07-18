@@ -1,5 +1,10 @@
-var http = require('http');
-var requestHandler = require('./requestHandler')
-var PORT=1234;
-http.createServer(requestHandler.onRequest).listen(PORT);
-console.log("server is now running"+PORT);
+var express= require('express');
+
+var app=express();
+
+require('./config/middleware.js')(app,express);
+require('./config/routes.js')(app,express);
+
+app.listen(8000);
+console.log("server now is listning");
+module.exports=app;

@@ -2,19 +2,32 @@
   "name": "memorize",
   "version": "1.0.0",
   "description": "it memorize online note book",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ibrahimtamimi/Romilda.git"
+    "url": "https://github.com/RomildaRBK/Romilda.git"
   },
   "author": "ibrahimTamimi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ibrahimtamimi/Romilda/issues"
+    "url": "https://github.com/RomildaRBK/Romilda/issues"
   },
-  "homepage": "https://github.com/ibrahimtamimi/Romilda#readme"
+  "homepage": "https://github.com/RomildaRBK/Romilda#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "angular": "~1.3.16",
+    "angular-route": "~1.3.16",
+    "angular-mocks": "~1.3.16",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5",
+    "jwt-simple": "^0.2.0",
+    "morgan": "^1.1.1",
+    "q": "^1.4.1",
+    "request": "^2.36.0"
+  }
 }
