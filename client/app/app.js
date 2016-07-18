@@ -3,17 +3,17 @@ angular.module('Memorize', [
   'Memorize.frined',
   'Memorize.notes',
   'Memorize.auth',
-  'Memorize.search'
+  'Memorize.search',
   'ngRoute'
 ])
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
     .when('/signin', {
-      templateUrl: 'app/auth/signin.html',
+      templateUrl: 'client/app/auth/signin.html',
       controller: 'AuthController'
     })
     .when('/signup', {
-      templateUrl: 'app/auth/signup.html',
+      templateUrl: 'client/app/auth/signup.html',
       controller: 'AuthController'
     })
     .when('/frined', {
