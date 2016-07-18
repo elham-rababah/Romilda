@@ -13,4 +13,3 @@ function onRequest(request, response) {
 	response.end();
 }
 
-//app.get()
