@@ -1,8 +1,9 @@
-angular.module('memorize', [
-  'memorize.services',
-  'memorize.frined',
-  'memorize.notes',
-  'memorize.auth',
+angular.module('Memorize', [
+  'Memorize.services',
+  'Memorize.frined',
+  'Memorize.notes',
+  'Memorize.auth',
+  'Memorize.search'
   'ngRoute'
 ])
 .config(function ($routeProvider, $httpProvider) {
@@ -28,7 +29,7 @@ angular.module('memorize', [
 .factory('AttachTokens', function ($window) {
   var attach = {
     request: function (object) {
-      var jwt = $window.localStorage.getItem('com.memorize');
+      var jwt = $window.localStorage.getItem('com.Memorize');
       if (jwt) {
         object.headers['x-access-token'] = jwt;
       }
