@@ -1,4 +1,4 @@
-angular.module('memorize.auth', [])
+angular.module('Memorize.auth', [])
 
 .controller('AuthController', function ($scope, $window, $location, Auth) {
   $scope.user = {};
