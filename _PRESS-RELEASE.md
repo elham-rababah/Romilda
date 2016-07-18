@@ -26,7 +26,9 @@ Once the project moves into development, the press release can be used as a touc
   > The memorize is a website for store and save your messages and your memory or to send it or share it with friends
   
 ## Problem ##
-  > The traditional way to store your data is not secure , because the book could be worn off damage or lost 
+  > The traditional way to store your data is not secure , because the book could be worn off damage or lost .
+  >help you acsess the memorize just in esaly.
+  
   
 
 ## Solution ##
@@ -36,10 +38,9 @@ Once the project moves into development, the press release can be used as a touc
   > It will be your best friend .
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  >you can start write memorize just by create account ;
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
+  >Beatuifull way to write memorize and keep it secure
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  >This web will make you abel to wite memorize and after that you can  share this memorize  with your friend .
