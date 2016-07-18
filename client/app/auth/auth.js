@@ -3,9 +3,6 @@ angular.module('Memorize.auth', [])
 .controller('AuthController', function ($scope, $window, $location, Auth) {
   $scope.user = {};
 
-
-
-
   $scope.signin = function () {
     Auth.signin($scope.user)
       .then(function (token) {
@@ -16,12 +13,7 @@ angular.module('Memorize.auth', [])
         console.error(error);
       });
   };
-
-
-
-
-
-
+  
   $scope.signup = function () {
     Auth.signup($scope.user)
       .then(function (token) {
