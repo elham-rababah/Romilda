@@ -1,4 +1,4 @@
-angular.moder('Memorize.search',[])
+angular.module('Memorize.search',[])
 .controller('SearchController',function($scope,Search){
 	$scope.Notes={};
 	$scope.Note={};
