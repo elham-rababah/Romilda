@@ -1,4 +1,4 @@
-angular.module('m.frined', [])
+angular.module('Memorize.frined', [])
 
 .controller('frinedController', function ($scope) {
 	$scope.frined=[];
