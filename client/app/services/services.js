@@ -5,7 +5,7 @@ angular.module('Memories.services',[])
 		return $http({
 			method:'POST',
 			url:'',
-			data:memp
+			data:memo
 		})
 		.then(function(resp){
 			return resp;
@@ -61,6 +61,5 @@ angular.module('Memories.services',[])
 		getNote : getNote,
 		getFriends : getFriends,
 		getFriend : getFriend
-	}
-};
+	};
 })
