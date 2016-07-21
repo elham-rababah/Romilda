@@ -13,12 +13,6 @@ angular.module('Memorize.services',[])
 		});
 	};
 
-	return {
-		saveMemo:saveMemo
-	};
-})
-
-.factory('Search',function($http){
 	var getNotes=function(){
 		return $http({
 			method:'GET',
@@ -39,6 +33,15 @@ angular.module('Memorize.services',[])
 		});
 	};
 
+	return {
+		saveMemo:saveMemo,
+		getNotes:getNotes,
+		getNote:getNote
+	};
+})
+
+.factory('Search',function($http){
+	
 	var getFriends=function(){
 		return $http({
 			method:'GET',
@@ -60,8 +63,6 @@ angular.module('Memorize.services',[])
 	};
 
 	return{
-		getNotes : getNotes,
-		getNote : getNote,
 		getFriends : getFriends,
 		getFriend : getFriend
 	};
@@ -71,7 +72,7 @@ angular.module('Memorize.services',[])
   var signin = function (user) {
     return $http({
       method: 'POST',
-      url: '/api/auth/signin',
+      url: '/api/signin',
       data: user
     })
     .then(function (resp) {
@@ -82,7 +83,7 @@ angular.module('Memorize.services',[])
   var signup = function (user) {
     return $http({
       method: 'POST',
-      url: '/api/auth/signup',
+      url: '/api/signup',
       data: user
     })
     .then(function (resp) {
@@ -95,7 +96,7 @@ angular.module('Memorize.services',[])
   };
 
   var signout = function () {
-    $window.localStorage.removeItem('com.Memorize');
+    $window.localStorage.removeItem('com.memorize');
     $location.path('/signin');
   };
 
