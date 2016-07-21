@@ -1,4 +1,4 @@
-<doctype! html>
+
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
@@ -6,18 +6,23 @@
   <script src="app/auth/auth.js" ></script>
   <script src="app/frined/frined.js" ></script>
   <script src="app/notes/notes.js" ></script>
-  <script src="app/search/serach.js" ></script>
+  <script src="app/search/search.js" ></script>
   <script src="app/app.js" ></script>
 </head>
-  <body>
-  <h1>Memoriz</h1>
+  <body ng-app="Memorize">
+  <img src="http://vignette3.wikia.nocookie.net/rememberme/images/6/68/M3MORIZE.png/revision/latest?cb=20130630150012" width="100%" height="20%">
+  
+  <div ng-view> 
   <div class="navigation">
+
     <ul>
       <li><a href="#/friend">frined</a></li>
       <li><a href="#/notes">notes</a></li>
       <li><a href="#/search">search</a></li>
     </ul>
-  </div>
+    </div>
+    </div>
+  
   	
   </body>
 </html>

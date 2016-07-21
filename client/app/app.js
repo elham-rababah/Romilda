@@ -3,7 +3,7 @@ angular.module('Memorize', [
   'Memorize.frined',
   'Memorize.notes',
   'Memorize.auth',
-  'Memorize.search'
+  'Memorize.search',
   'ngRoute'
 ])
 .config(function ($routeProvider, $httpProvider) {
