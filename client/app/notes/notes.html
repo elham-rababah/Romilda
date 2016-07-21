@@ -1,19 +1,4 @@
-<div class="content">
-  <div id="header">
-    <div class="title"> 
-    </div>
-  </div>
-  <div id="main">
-    <div class="center">
-      <h2>Write Your Note</h2>
-      <div id="notes" ng-controller="NotesController">
-      <br><br>
-      <textarea style="background:transparent; border-width: 4px; border-color:rgb(131, 64, 10); font-size: 14pt;" rows="15" cols="45" ng-mode="memo"></textarea>
-           <br><br><br>
-       <button class="button-notes" ng-click="save()" >send</button>
-      </div>
-    </div>  
-  </div>
-  <div id="prefooter">
-  </div> 
+<div id="notes">
+	<textarea rows="4" cols="50" ng-mode="memo"></textarea>
+	<button ng-click="save()">send</button>
 </div>
