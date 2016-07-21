@@ -7,20 +7,18 @@ var jwt = require('jwt-simple');
 
 module.exports = {
 	signin:function(req,res,next){
-	  var username = req.body.username;
-	  var password = req.body.password;
+	   var username = req.body.username;
+       var password = req.body.password;
 
 	  new User({username:username}).fetch().then(function(user){
 	    if(!user){
 	      next(new Error('user does not exist'));
 	    }
 	    else{
-		      bcrypt.compare(pass,user.get('password'),function(err,match){
-		        if(match){
-		          //util.createSession(req,res,user);
+		     bcrypt.compare(password,user.get('password'),function(err,match){
+		       if(match){
 		          var token = jwt.encode(user, 'secret');
-                res.json({token: token});
-		          next("done")
+                  res.json({token: token});
 		         }
 		         else{
 		          next(new Error('No user'));
@@ -31,34 +29,32 @@ module.exports = {
 	},
 	signup:function(req,res,next){
 
-	  var user=req.body.username;
+	  var username=req.body.username;
 	  var pass=req.body.password;
 	  var name=req.body.name;
 	  var gender=req.body.gender;
 	  var email=req.body.email;
 	  var birthday=req.body.birthday;
-	  //var image=req.body.image;
+	  var image=req.body.image;
 
-	  new User({username:user}).fetch().then(function(user){
+	  new User({username:username}).fetch().then(function(user){
 	    if(!user){
-	      // bcrypt.hash(pass, null, null, function(err, hash){
-	      //   pass=hash;
+	       bcrypt.hash(pass, null, null, function(err, hash){
+	        pass=hash;
 	        var newUser=new User({
-	          username:user,
+	          username:username,
 	          password:pass,
 	          email:email,
 	          name:name,
 	          birthday:birthday,
 	          gender:gender,
-	          imgurl:"something"
+	          imgurl:image
 	        });
-	        newUser.save().then(function(){
-	        //util.createSession(res,req,newUser);
+	        newUser.save().then(function(){	   
 	        var token = jwt.encode(user, 'secret');
                 res.json({token: token});
-	        console.log('saved')
 	  		})
-	  //  });
+	    });
 	  }
 	   else{
 	      next(new Error('user exists'));

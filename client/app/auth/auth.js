@@ -7,6 +7,7 @@ angular.module('Memorize.auth', [])
     Auth.signin($scope.user)
       .then(function (token) {
         $window.localStorage.setItem('com.memorize', token);
+        console.log("changed again");
         $location.path('/notes');
       })
       .catch(function (error) {
@@ -15,10 +16,12 @@ angular.module('Memorize.auth', [])
   };
   
   $scope.signup = function () {
+    //ng-model does not support reading from files type, so we used this:
+    $scope.user.image=document.getElementById('image').value;
     Auth.signup($scope.user)
       .then(function (token) {
-       // $window.localStorage.setItem('com.memorize', token);
-       console.log("true")
+       $window.localStorage.setItem('com.memorize', token);
+       console.log($scope.user);
         $location.path('/notes');
       })
       .catch(function (error) {
