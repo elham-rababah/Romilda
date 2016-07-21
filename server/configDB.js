@@ -35,7 +35,7 @@ db.knex.schema.hasTable('Notes').then(function(exists) {
       note.increments('id').primary();;
       note.string('username', 255).references('Users.username');
       note.string('content', 255);
-      note.timestamps('date').defaultTo(knex.fn.now());
+      note.timestamps('date');
       }).then(function (table) {
       console.log('Created Table', table);
     });

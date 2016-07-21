@@ -9,19 +9,19 @@ angular.module('Memorize', [
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
     .when('/signin', {
-      templateUrl: 'auth/signin.html',
+      templateUrl: 'app/auth/signin.html',
       controller: 'AuthController'
     })
     .when('/signup', {
-      templateUrl: 'auth/signup.html',
+      templateUrl: 'app/auth/signup.html',
       controller: 'AuthController'
     })
-    .when('/friend', {
+    .when('/frined', {
       templateUrl: 'app/frined/frined.html',
       controller: 'frinedController'
     })
     .when('/notes', {
-      templateUrl: 'notes/notes.html',
+      templateUrl: 'app/notes/notes.html',
       controller: 'NotesController'
     })
     $httpProvider.interceptors.push('AttachTokens');
@@ -43,8 +43,8 @@ angular.module('Memorize', [
 
 .run(function ($rootScope, $location, Auth) {
   $rootScope.$on('$routeChangeStart', function (evt, next, current) {
-    if (next.$$route && next.$$route.authenticate && !Auth.isAuth()) {
-      $location.path('/signin');
-    }
+    // if (next.$$route && next.$$route.authenticate && !Auth.isAuth()) {
+    //   $location.path('/signin');
+    // }
   });
 });
