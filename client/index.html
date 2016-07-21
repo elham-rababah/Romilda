@@ -2,7 +2,9 @@
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="styles/style.css" />
+
   <script src="app/auth/auth.js" ></script>
   <script src="app/frined/frined.js" ></script>
   <script src="app/notes/notes.js" ></script>
@@ -10,7 +12,7 @@
   <script src="app/app.js" ></script>
 </head>
   <body ng-app="Memorize">
-  <img src="http://vignette3.wikia.nocookie.net/rememberme/images/6/68/M3MORIZE.png/revision/latest?cb=20130630150012" width="100%" height="30%">
+  <img src="http://vignette3.wikia.nocookie.net/rememberme/images/6/68/M3MORIZE.png/revision/latest?cb=20130630150012" width="100%" height="20%">
   
   <div ng-view> 
   <div class="navigation">
@@ -22,7 +24,12 @@
     </ul>
     </div>
     </div>
-  
-  	
+    <div ng-repeat="frined in frineds">
+  <img src="" />
+  <div class="name">name</div>
+  <div class="write">write note</div>
+  <div class="remove">remove frined</div>
+  <a href="{{frind.name}}">page</a>
+</div>
   </body>
 </html>
