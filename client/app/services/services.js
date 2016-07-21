@@ -15,7 +15,7 @@ angular.module('Memorize.services',[])
 		saveMemo:saveMemo
 	};
 })
-//=====================================================================================================
+
 .factory('Search',function($http){
 	var getNotes=function(){
 		return $http({
@@ -63,9 +63,6 @@ angular.module('Memorize.services',[])
 		getFriend : getFriend
 	};
 });
-//=================================================================
-
-
 
 .factory('Auth', function ($http, $location, $window) {
   var signin = function (user) {
@@ -98,7 +95,6 @@ angular.module('Memorize.services',[])
     $window.localStorage.removeItem('com.Memorize');
     $location.path('/signin');
   };
-
 
   return {
     signin: signin,

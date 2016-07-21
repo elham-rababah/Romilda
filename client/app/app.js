@@ -9,19 +9,19 @@ angular.module('Memorize', [
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
     .when('/signin', {
-      templateUrl: 'client/app/auth/signin.html',
+      templateUrl: 'auth/signin.html',
       controller: 'AuthController'
     })
     .when('/signup', {
-      templateUrl: 'client/app/auth/signup.html',
+      templateUrl: 'auth/signup.html',
       controller: 'AuthController'
     })
-    .when('/frined', {
+    .when('/friend', {
       templateUrl: 'app/frined/frined.html',
-      controller: 'FirnedController'
+      controller: 'frinedController'
     })
     .when('/notes', {
-      templateUrl: 'app/notes/notes.html',
+      templateUrl: 'notes/notes.html',
       controller: 'NotesController'
     })
     $httpProvider.interceptors.push('AttachTokens');
