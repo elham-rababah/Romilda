@@ -1,10 +1,9 @@
 var User=require('./models/user');
 var Friend=require('./models/friend');
 var Note=require('./models/note');
-var Users=require('./collections/users');
-var Friends=require('./collections/friends');
-var Notes=require('./collections/notes');
 var db=require('./configDB');
+var bcrypt = require('bcrypt-nodejs');
+var jwt = require('jwt-simple');
 
 module.exports = {
 	signin:function(req,res,next){
@@ -19,8 +18,11 @@ module.exports = {
 		      bcrypt.compare(pass,user.get('password'),function(err,match){
 		        if(match){
 		          //util.createSession(req,res,user);
-		        }
-		        else{
+		          var token = jwt.encode(user, 'secret');
+                res.json({token: token});
+		          next("done")
+		         }
+		         else{
 		          next(new Error('No user'));
 		         }
 	          });
@@ -28,20 +30,35 @@ module.exports = {
  	 });
 	},
 	signup:function(req,res,next){
-	  var user=res.body.username;
-	  var pass=res.body.password;
+
+	  var user=req.body.username;
+	  var pass=req.body.password;
+	  var name=req.body.name;
+	  var gender=req.body.gender;
+	  var email=req.body.email;
+	  var birthday=req.body.birthday;
+	  //var image=req.body.image;
+
 	  new User({username:user}).fetch().then(function(user){
 	    if(!user){
-	      bcrypt.hash(pass, null, null, function(err, hash){
-	        pass=hash;
+	      // bcrypt.hash(pass, null, null, function(err, hash){
+	      //   pass=hash;
 	        var newUser=new User({
 	          username:user,
-	          password:pass
+	          password:pass,
+	          email:email,
+	          name:name,
+	          birthday:birthday,
+	          gender:gender,
+	          imgurl:"something"
 	        });
 	        newUser.save().then(function(){
 	        //util.createSession(res,req,newUser);
-	  		 })
-	    });
+	        var token = jwt.encode(user, 'secret');
+                res.json({token: token});
+	        console.log('saved')
+	  		})
+	  //  });
 	  }
 	   else{
 	      next(new Error('user exists'));

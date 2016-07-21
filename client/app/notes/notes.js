@@ -9,4 +9,8 @@ angular.module('Memorize.notes',[])
 			resp.data=$scope.memo;
 		})
 	}
+
+	Notes.getNotes().then(function(data){
+		$scope.Notes=data;
+	});
 });

@@ -7,7 +7,7 @@ var db = Bookshelf.initialize({
     host: '127.0.0.1',
     user: 'root',
     password: 'password',
-    database: 'Memories',
+    database: 'Memorize',
     charset: 'utf8',
     filename: path.join(__dirname, '../db/Memorize.sqlite')
   }
@@ -21,8 +21,9 @@ db.knex.schema.hasTable('Users').then(function(exists) {
       user.string('email', 255);
       user.string('name', 100);
       user.string('birthday', 255);
-      user.string('Gendr',255);
+      user.string('gender',255);
       user.string('imgurl',255);
+      user.timestamps();
     }).then(function (table) {
       console.log('Created Table', table);
     });
