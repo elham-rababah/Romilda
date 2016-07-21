@@ -1,23 +1,29 @@
 <doctype! html>
-<html>
+<html ng-app='Memorize'>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles/style.css" />
-  <script src="app/auth/auth.js" ></script>
-  <script src="app/frined/frined.js" ></script>
-  <script src="app/notes/notes.js" ></script>
-  <script src="app/search/search.js" ></script>
-  <script src="app/app.js" ></script>
-</head>
+
+<!--   <link rel="stylesheet" type="text/css" href="styles/style.css" /> -->
+  </head>
   <body>
   <h1>Memoriz</h1>
   <div class="navigation">
     <ul>
-      <li><a href="#/friend">frined</a></li>
+      <li><a href="#/frined">frined</a></li>
       <li><a href="#/notes">notes</a></li>
       <li><a href="#/search">search</a></li>
     </ul>
   </div>
-  	<div ng-view></div>
+  <div ng-view></div>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  
+  <script src="app/auth/auth.js" ></script>
+  <script src="app/frined/frined.js" ></script>
+  <script src="app/notes/notes.js" ></script>
+  <script src="app/search/search.js" ></script>
+  <script src="app/services/services.js"></script>
+  <script src="app/app.js" ></script>
+
   </body>
 </html>

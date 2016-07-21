@@ -9,16 +9,16 @@ angular.module('Memorize', [
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
     .when('/signin', {
-      templateUrl: 'client/app/auth/signin.html',
+      templateUrl: 'app/auth/signin.html',
       controller: 'AuthController'
     })
     .when('/signup', {
-      templateUrl: 'client/app/auth/signup.html',
+      templateUrl: 'app/auth/signup.html',
       controller: 'AuthController'
     })
     .when('/frined', {
       templateUrl: 'app/frined/frined.html',
-      controller: 'FirnedController'
+      controller: 'frinedController'
     })
     .when('/notes', {
       templateUrl: 'app/notes/notes.html',
@@ -43,8 +43,8 @@ angular.module('Memorize', [
 
 .run(function ($rootScope, $location, Auth) {
   $rootScope.$on('$routeChangeStart', function (evt, next, current) {
-    if (next.$$route && next.$$route.authenticate && !Auth.isAuth()) {
-      $location.path('/signin');
-    }
+    // if (next.$$route && next.$$route.authenticate && !Auth.isAuth()) {
+    //   $location.path('/signin');
+    // }
   });
 });

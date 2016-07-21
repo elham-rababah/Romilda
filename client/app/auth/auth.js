@@ -7,7 +7,7 @@ angular.module('Memorize.auth', [])
     Auth.signin($scope.user)
       .then(function (token) {
         $window.localStorage.setItem('com.memorize', token);
-        $location.path('/links');
+       // $location.path('/links');
       })
       .catch(function (error) {
         console.error(error);
@@ -18,7 +18,7 @@ angular.module('Memorize.auth', [])
     Auth.signup($scope.user)
       .then(function (token) {
         $window.localStorage.setItem('com.memorize', token);
-        $location.path('/links');
+       // $location.path('/links');
       })
       .catch(function (error) {
         console.error(error);

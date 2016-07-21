@@ -1,6 +1,7 @@
 angular.module('Memorize.services',[])
 
-.factory('Notes',function($http){
+.factory('Notes', function($http){
+
 	var saveMemo=function(memo){
 		return $http({
 			method:'POST',
@@ -11,11 +12,12 @@ angular.module('Memorize.services',[])
 			return resp;
 		});
 	};
-	return{
+
+	return {
 		saveMemo:saveMemo
 	};
 })
-//=====================================================================================================
+
 .factory('Search',function($http){
 	var getNotes=function(){
 		return $http({
@@ -36,6 +38,7 @@ angular.module('Memorize.services',[])
 			return resp.data;
 		});
 	};
+
 	var getFriends=function(){
 		return $http({
 			method:'GET',
@@ -62,10 +65,7 @@ angular.module('Memorize.services',[])
 		getFriends : getFriends,
 		getFriend : getFriend
 	};
-});
-//=================================================================
-
-
+})
 
 .factory('Auth', function ($http, $location, $window) {
   var signin = function (user) {
@@ -98,7 +98,6 @@ angular.module('Memorize.services',[])
     $window.localStorage.removeItem('com.Memorize');
     $location.path('/signin');
   };
-
 
   return {
     signin: signin,
