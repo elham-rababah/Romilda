@@ -1,8 +1,8 @@
 var controller = require('../dbController.js');
 var helpers = require('./helpers.js');
 module.exports = function (app, express) {
-	// app.post('/api/users/signin',controller.signin);
-	// app.post('/api/users/signup',controller.signup);
+	 app.post('/api/signin', controller.signin);
+	 app.post('/api/signup', controller.signup);
 	// app.get('/user/profile', controller.viewFriend);
 	// app.post('/user/profile', controller.addFriend);
 	// app.get('/user/notes',controller.viewNotes);

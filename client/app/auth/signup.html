@@ -1,10 +1,22 @@
 <div id='signup'>
 <br>
   <h1>signup</h1>
+<<<<<<< HEAD
   <form name="signupForm" ng-submit='signup()'>
     <input type='text' ng-model='user.username'>
     <input type="password" ng-model='user.password'>
     <button class="button">signup</button>
+=======
+  <form name="signupForm" accept="image/gif,image/jpeg" ng-submit='signup()'>
+    <input type='text' placeholder="username" ng-model='user.username'><br>
+    <input type="password" placeholder="password" ng-model='user.password'><br>
+    <input type="text" placeholder="name" ng-model="user.name"><br>
+    <input type="text" placeholder="email" ng-model="user.email"><br>
+    <input type="text" placeholder="birthday" ng-model="user.birthday"><br>
+    <input type="text" placeholder="gender" ng-model="user.gender"><br>
+    <input type="file" placeholder="image" ng-model="user.image" id="image"><br>
+    <button>signup</button>
+>>>>>>> 2619af094fb407701cd41a88eac1dcba790c1a9c
   </form>
   <a href="#/signin">Already have an account? <strong>Signin</strong> ...</a>
 </div>
