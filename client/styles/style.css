@@ -25,7 +25,13 @@
     cursor: pointer;
     float: right;
 }
-
+.freind{
+  margin: 100;
+}
+.name{
+  color:rgb(232, 173, 26);
+  font-size: 18px;
+}
 body {
   margin: 0;
   margin-top: 10px;
