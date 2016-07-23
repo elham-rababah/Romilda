@@ -5,7 +5,7 @@ var helpers = require('./helpers.js');
 module.exports = function (app, express) {
 	 app.post('/api/signin', controller.signin);
 	 app.post('/api/signup', controller.signup);
-	// app.get('/user/profile', controller.viewFriend);
+	 //app.get('/api/profile', controller.viewFriend);
 	// app.post('/user/profile', controller.addFriend);
 
 	 app.get('/api/notes',controller.viewNotes);

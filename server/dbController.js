@@ -115,7 +115,29 @@ module.exports = {
 	addFriend:function(){
 
 	},
-	viewFriend:function(){
+	viewFriend:function(req,res){
+         console.log(req.session)
+          
+		/*knex('Freinds').where({Firstside:theuser,Secondside:friend})
+.orwhere({Firstside:theuser,Secondside:friend})
+.fetch().then(function(relation){
+	if(relation){
+
+	}
+	else{
+		var newfriend =new friends({
+  	    Firstside :Firstside,
+     	Secondside:Secondside
+       })
+
+       newfriend.save().then(function(){
+  	//open the new friend 
+       })*/
+
+
+   }
+})
+
 
 	}
 }
