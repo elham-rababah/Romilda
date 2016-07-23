@@ -61,8 +61,9 @@ module.exports = {
 	    }
 	  });
 	},
-	saveNote:function(){
-
+	saveNote:function(req,res,next){
+		var token=req.body.token;
+		res.json({token:token})
 	},
 	viewNotes:function(){
 

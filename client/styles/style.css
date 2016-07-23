@@ -1,4 +1,7 @@
-
+.firend-left{
+  loat: left;
+  display: inline;
+}
 .button {
     background-color:rgb(131, 64, 10);
     border: none;

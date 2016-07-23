@@ -19,8 +19,17 @@
 
   </div>
   <div ng-view></div>
+  <div class="freind" ng-repeat="frined in frineds">
+ 
+  <img src="/Users/admin/Desktop/1234.jpg" width="300px" height="300px" />
+  <div class="name">name:hi</div>
+  <div class="write">write note</div>
+  <div class="remove">remove frined</div>
+  <a href="{{frind.name}}">page</a>
+  </br>
+</div>
 
-  <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app/auth/auth.js" ></script>
   <script src="app/frined/frined.js" ></script>

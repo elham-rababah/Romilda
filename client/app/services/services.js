@@ -16,7 +16,7 @@ angular.module('Memorize.services',[])
 	var getNotes=function(){
 		return $http({
 			method:'GET',
-			url:''
+			url:'/api/notes'
 		})
 		.then(function(resp){
 			return resp.data;
@@ -26,7 +26,7 @@ angular.module('Memorize.services',[])
 	var getNote=function(){
 		return $http({
 			method:'GET',
-			url:'/notes/notes.html'
+			url:'/api/notes'
 		})
 		.then(function(resp){
 			return resp.data;
