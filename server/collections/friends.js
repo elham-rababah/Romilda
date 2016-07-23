@@ -6,3 +6,4 @@ var Friends = new db.Collection();
 Friends.model = Friend;
 
 module.exports = Friends;
+

@@ -62,6 +62,7 @@ module.exports = {
 	  });
 	},
 	saveNote:function(req,res,next){
+
 		// var username=req.user.username;
 		// var content=req.body.memo;
 	
