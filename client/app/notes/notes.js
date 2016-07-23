@@ -11,7 +11,9 @@ angular.module('Memorize.notes',[])
 		Notes.saveMemo(val)
 		.then(function(resp){
 			resp.data=val;
-			console.log(resp.data);
+			Notes.getNotes().then(function(data){
+			$scope.Notes.data=data;
+			});
 		})
 	};
 

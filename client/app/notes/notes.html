@@ -1,22 +1,29 @@
 <div id="notes">
   </br>
-  <center>
+  
   <button class="button"type="button"  data-toggle="collapse" class="toggleButton" data-target="#writeNotes">Write a Note</button>
   <button class="button" type="button"  data-toggle="collapse" class="toggleButton" data-target="#myNotes">show Notes</button>
-  </center>
- <!-- <div id="writeNotes" class="collapse" class="form-group" >
-    <label for="comment">write your memo</label>
-    <textarea class="form-control" rows="10" id="comment" ng-model="memo"></textarea>
-    <button ng-click="save()" class="Notesbutton">Save</button>
-    <button ng-click="save()" class="Notesbutton">Send</button>
-    </center>
-  </div>-->
+  
 
+ 
+   <!--   <div id="myNotes" class="collapse">
+    <div class="mycolor myNotes" ng-repeat='data in Notes.data'>
+    <ul list-style: none;>
+      <div ng-repeat='d in data'>
+        <li>{{d['content']}}</li>
+    </div>
+    </ul>
+  </div>
+-->
   <div id="myNotes" class="collapse" >
    <ul list-style: none;>
+  dfdf
   <div class="mycolor myNotes" ng-repeat="note in notes">
-     
-     <li>{note.content}</li>
+     <div ng-repeat='d in data'>
+
+        <li>{{d['content']}}</li>
+    </div>
+
   </div>  
   </ul>
   </div>
