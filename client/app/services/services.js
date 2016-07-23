@@ -5,7 +5,7 @@ angular.module('Memorize.services',[])
 	var saveMemo=function(memo){
 		return $http({
 			method:'POST',
-			url:'api/notes',
+			url:'/api/notes',
 			data:memo
 		})
 		.then(function(resp){
@@ -76,7 +76,7 @@ angular.module('Memorize.services',[])
       data: user
     })
     .then(function (resp) {
-      return resp.data.token;
+      return resp.data;
     });
   };
 
