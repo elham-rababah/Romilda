@@ -1,5 +1,27 @@
-</br>
- <div class="content">
+<div id="notes">
+  </br>
+  <center>
+  <button class="button"type="button"  data-toggle="collapse" class="toggleButton" data-target="#writeNotes">Write a Note</button>
+  <button class="button" type="button"  data-toggle="collapse" class="toggleButton" data-target="#myNotes">show Notes</button>
+  </center>
+ <!-- <div id="writeNotes" class="collapse" class="form-group" >
+    <label for="comment">write your memo</label>
+    <textarea class="form-control" rows="10" id="comment" ng-model="memo"></textarea>
+    <button ng-click="save()" class="Notesbutton">Save</button>
+    <button ng-click="save()" class="Notesbutton">Send</button>
+    </center>
+  </div>-->
+
+  <div id="myNotes" class="collapse" >
+   <ul list-style: none;>
+  <div class="mycolor myNotes" ng-repeat="note in notes">
+     
+     <li>{note.content}</li>
+  </div>  
+  </ul>
+  </div>
+ 
+ <div id="writeNotes" class="collapse content">
     <div id="header">
       <div class="title"> 
       </div>
@@ -11,10 +33,17 @@
         <br><br>
         <textarea style="background:transparent; border-width: 4px; border-color:rgb(131, 64, 10); font-size: 14pt;" rows="15" cols="45" ng-mode="memo"></textarea>
              <br><br><br>
- 
-        <button class="button-notes" ng-click="save()" >send</button>
+           
+        <button class="button" ng-click="save()" class="Notesbutton">Send</button>
+        <button class="button-notes" ng-click="save()" >Save</button>
         </div>
       </div>  
     </div>
     <div id="prefooter">
     </div> 
+</div>
+
+
+
+
+ 

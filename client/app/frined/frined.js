@@ -1,7 +1,7 @@
 angular.module('Memorize.frined', [])
 
 .controller('frinedController', function ($scope) {
-	$scope.frined=[];
+	$scope.frineds=[];
 	$scope.sendToFrined=function(){
 
 	}
