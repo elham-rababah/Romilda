@@ -117,7 +117,6 @@ module.exports = {
 			if(!user){
 				res.json("not found")
 			}else{
-				//console.log(user);
 				res.json({uservalue:user});
 			}
 		})

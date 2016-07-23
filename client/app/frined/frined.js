@@ -9,9 +9,7 @@ angular.module('Memorize.frined', [])
 	$scope.remove=function(){
 
 	}
-
 	Friends.getFriends().then(function(data){
 		$scope.frined.all=data;
 	})
-
 });

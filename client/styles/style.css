@@ -1,10 +1,62 @@
+.uth{
+  font-size: 13px;
+}
+.myNotes{
+  list-style: none; 
+  font-size: 25px; 
+  padding-left: 200px;
+}
+.mycolor{
+  color:rgb(232, 173, 26);
+}
+.firend-left{
+  float:left;
+  display: inline;
+  margin: 60px 60px;
+}
+.button {
+    background-color:rgb(131, 64, 10);
+    border: none;
+    color: rgb(232, 173, 26);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+   margin-left:200px;
+}
+.button-notes {
+    background-color:rgb(131, 64, 10);
+    border: none;
+    color: rgb(232, 173, 26);
+    padding: 15px 32px;
+    text-align: center;f
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: right;
+}
+.margin{
+  margin: 100;
+}
+.name{
+  color:rgb(232, 173, 26);
+  font-size: 18px;
+}
 body {
   background:#e6e6e6;
   margin: 0;
   margin-top: 10px;
   font-family: arial, sans-serif;
 }
-
+.mome{
+  color: rgb(158, 48, 149);
+  text-align=right: ;
+}
 a {
   color: #333;
   font-size: 14px;
@@ -14,6 +66,23 @@ a {
 h1 {
   font-style: italic;
   margin-bottom: 10px;
+}
+
+.navigation {
+  width: 100%;
+  height: 40px;
+  background-color: #eee;
+}
+
+.navigation ul {
+  margin: 0;
+
+  padding: 0;
+  list-style: none;
+}
+
+.navigation li {
+  float: left;
 }
 
 .toggleButton{
@@ -27,9 +96,12 @@ h1 {
     display: inline-block;
     font-size: 16px;
     margin-top: 10px;
+
 }
 
 .navigation li a {
+  color: rgb(131, 64, 10);
+  font-size: 20px;
   width: 100px;
   height: 20px;
   line-height: 20px;
@@ -168,6 +240,36 @@ input[type=url]:focus {
 
 
 
+.content { color: #3B2A0A; margin: 0 auto; padding: 0; width: 825px; background: url(../images/bg2.jpg) repeat-y center bottom; }
+#header { background: url(../images/header.jpg) no-repeat; width: 825px; height: 213px; color: #3B2A0A; }
+#header h1 { background: inherit; font: bold 3em "Tahoma", Arial; color: #85621E; line-height: 1em;}
+#header h3 { background: inherit; font: bold 1em "Tahoma", Arial; color: #000; }
+#header .title { padding: 60px 0 0 60px; }
+#main { background: url((../images/bg.jpg) no-repeat top; height: 353px; margin: 0; padding: 0 } 
+#main .center { width: 550px; float: right; padding: 0 60px 0 0px; }
+#main h2 { background-color: inherit; color: #85621E; line-height: 0.2em; }
+#main h3 { font: 85% Arial, Sans-Serif; margin: 0 0 10px 0; padding: 0; color: #5f5f5f; background: inherit; }
+
+.leftmenu { width: 120px; float: left; padding: 0; padding: 0 0 0 40px; }
+.padding { padding: 15px; }
+
+.img { background: #FFF; float: left; padding: 1px; margin: 5px 8px 5px 0; color: #333; border: 1px solid #e0e0e0; }
+
+/* PREFOOTER */
+#prefooter { background: url(../images/prefooter.jpg) no-repeat; color: #85621f; height: 190px; text-align: left;  clear: both; padding: 0px; margin: 0; }
+#prefooter .particles { float: right; width: 300px; padding: 20px 30px 0 0; background: transparent }
+#prefooter .comments { width: 270px; padding: 20px 0px 0 0px; float: right; background: transparent }
+
+
+/* FOOTER */
+#footer { background: url(../images/footer.jpg) no-repeat; color: #8f8f8f; height: 44px; text-align: right; font-size: 90%; clear: both; padding: 0; margin: 0;}
+#footer .padding { padding: 20px 60px 0 0; }
+#footer hr { width: 740px; color: #888; border: 1px solid #f0f0f0; margin: 0 25px 0 25px;  }
+#footer a {   color: #999;  text-decoration:none; }
+#footer a:hover { text-decoration: underline; color: #FFF;}
+
+
+
 
 .search-form .form-group {
   float: right !important;
@@ -219,3 +321,4 @@ input[type=url]:focus {
   left: initial;
   font-size: 14px;
 }
+
