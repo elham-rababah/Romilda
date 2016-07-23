@@ -4,6 +4,7 @@ var Note=require('./models/note');
 var db=require('./configDB');
 var bcrypt = require('bcrypt-nodejs');
 var jwt = require('jwt-simple');
+var knex=require('knex');
 
 module.exports = {
 	signin:function(req,res,next){
@@ -63,54 +64,26 @@ module.exports = {
 	},
 	saveNote:function(req,res,next){
 		var username=req.user.username;
-		var content=req.body.memo;
+		var contents=req.body.memo;
+
 				var newNote=new Note({
 					username:username,
-					content:content
+					content:contents
 				});
 				newNote.save().then(function(){
-					console.log("savd")
+					console.log(contents);
 					res.json({});
 				});
 	},
 	viewNotes:function(req,res,next){
 		var username=req.user.username;
-
-		new Note({username:username}).fetch().then(function(data){
-			if(!data){
-				next(new Error('user exists'));
-			}else{
-				res.json({results:data});
-			}
+		db.knex.select().from('Notes').where({username:username}).orderBy('created_at', 'desc')
+		.then(function(row){
+			res.json({data:row});
 		})
-		// new User({}).fetch().then(function(data){
-		// 	if(!data){
-		// 		next(new Error('user exists'));
-		// 	}else{
-		// 		//console.log(req.body);
-		// 		//res.json({d:"hello"});
-		// 	}
-		// })
-		
-		// if (req.headers && req.headers.authorization) {
-  //       var authorization = headers.authorization,
-  //           decoded;
-  //       try {
-  //           var decoded = jwt.verify(req.headers, 'secret');
-  //       } catch (e) {
-  //           return res.status(401).send('unauthorized access');
-  //       }
-  //       var uesrname = decoded.uesrname;
-
-		// new User({uesrname:username}).fetch().then(function(user){
-		// 	if(!user){
-		// 		next(new Error('user exists'));
-		// 	}else{
-			// console.log("token",token);
-		 // 		res.json({token:token});
-		// 	}
-		// })
-			
+		// .map(function(row) {
+ 	// 		res.json(row.content);
+ 	// 	});
 	},
 	addFriend:function(){
 

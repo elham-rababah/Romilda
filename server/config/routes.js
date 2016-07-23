@@ -8,8 +8,8 @@ module.exports = function (app, express) {
 	// app.get('/user/profile', controller.viewFriend);
 	// app.post('/user/profile', controller.addFriend);
 	//app.use('/api/notes', helpers.decode);
-	 app.get('/api/notes/', helpers.decode, controller.viewNotes);
-	 app.post('/api/notes/', helpers.decode, controller.saveNote);
+	 app.get('/api/notes', helpers.decode, controller.viewNotes);
+	 app.post('/api/notes', helpers.decode, controller.saveNote);
 	// app.post('/user/notes',controller.saveNote);
 	// app.get('/user/notes',controller.viewNotes);
 	// app.post('/user/notes',controller.saveNote);
