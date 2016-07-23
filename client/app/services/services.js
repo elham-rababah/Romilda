@@ -1,7 +1,6 @@
 angular.module('Memorize.services',[])
 
 .factory('Notes', function($http){
-
 	var saveMemo=function(memo){
 		return $http({
 			method:'POST',
@@ -40,31 +39,35 @@ angular.module('Memorize.services',[])
 	};
 })
 
-.factory('Search',function($http){
-	
+.factory('Friends',function($http){
+
 	var getFriends=function(){
 		return $http({
 			method:'GET',
-			url:''
+			url:'/api/friends'
 		})
 		.then(function(resp){
 			return resp.data;
 		});
+	}; 
+	return{
+		getFriends : getFriends
 	};
+})
 
-	var getFriend=function(){
+.factory('Profile',function($http){
+
+	var showProfile=function(){
 		return $http({
 			method:'GET',
-			url:''
+			url:'/api/userprofil'
 		})
 		.then(function(resp){
 			return resp.data;
-		});
+		})
 	};
-
 	return{
-		getFriends : getFriends,
-		getFriend : getFriend
+		showProfile : showProfile
 	};
 })
 
