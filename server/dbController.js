@@ -62,21 +62,20 @@ module.exports = {
 	  });
 	},
 	saveNote:function(req,res,next){
-
-		// var username=req.user.username;
-		// var content=req.body.memo;
-	
-		// var Note=new Note({
-		// 	username:username,
-		// 	content:content
-		// });
-		// Note.save().then(function(){
-		// 	console.log("savd")
-		// res.json(Note);
-		// });
+		var username=req.user.username;
+		var content=req.body.memo;
+				var newNote=new Note({
+					username:username,
+					content:content
+				});
+				newNote.save().then(function(){
+					console.log("savd")
+					res.json({});
+				});
 	},
 	viewNotes:function(req,res,next){
 		var username=req.user.username;
+
 		new Note({username:username}).fetch().then(function(data){
 			if(!data){
 				next(new Error('user exists'));
