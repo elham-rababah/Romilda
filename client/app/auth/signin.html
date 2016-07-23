@@ -1,10 +1,15 @@
-<div id='signin'>
+<div class="margin"id='signin'>
+<br>
   <h1>signin</h1>
   <form name="signinForm" ng-submit='signin()'>
     <input type='text' ng-model='user.username'>
+    <br>
     <input type="password" ng-model='user.password'>
-    <button class="Notesbutton">signin</button>
+      <br>
+    <button class="button">signin</button>
+     
+
     {{user}}
   </form>
-  <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a>
+  <a href="#/signup" class="mycolor">Don't have an account? <strong>Signup</strong> ...</a>
 </div>
