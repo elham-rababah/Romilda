@@ -29,7 +29,7 @@ angular.module('Memorize', [
 .factory('AttachTokens', function ($window) {
   var attach = {
     request: function (object) {
-      var jwt = $window.localStorage.getItem('com.Memorize');
+      var jwt = $window.localStorage.getItem('com.memorize');
       if (jwt) {
         object.headers['x-access-token'] = jwt;
       }

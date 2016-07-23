@@ -23,6 +23,7 @@
     "angular-route": "~1.3.16",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.4.3",
+    "express-session": "^1.14.0",
     "bookshelf": "~0.7.1",
     "express": "^4.4.5",
     "jwt-simple": "^0.2.0",
