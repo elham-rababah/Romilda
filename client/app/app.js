@@ -3,7 +3,7 @@ angular.module('Memorize', [
   'Memorize.frined',
   'Memorize.notes',
   'Memorize.auth',
-  'Memorize.search',
+  'Memorize.profile',
   'ngRoute'
 ])
 .config(function ($routeProvider, $httpProvider) {
@@ -23,6 +23,10 @@ angular.module('Memorize', [
     .when('/notes', {
       templateUrl: 'app/notes/notes.html',
       controller: 'NotesController'
+    })
+    .when('/profile',{
+      templateUrl:'app/profile/profile.html',
+      controller: 'profileController'
     })
     $httpProvider.interceptors.push('AttachTokens');
 })
