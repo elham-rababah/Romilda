@@ -66,14 +66,14 @@ module.exports = {
 		var username=req.user.username;
 		var contents=req.body.memo;
 
-				var newNote=new Note({
-					username:username,
-					content:contents
-				});
-				newNote.save().then(function(){
-					console.log(contents);
-					res.json({});
-				});
+		var newNote=new Note({
+			username:username,
+			content:contents
+		});
+		newNote.save().then(function(){
+			console.log(contents);
+			res.json({});
+		});
 	},
 	viewNotes:function(req,res,next){
 		var username=req.user.username;
@@ -85,32 +85,40 @@ module.exports = {
  	// 		res.json(row.content);
  	// 	});
 	},
-	addFriend:function(){
+	addFriend:function(req,res,next){
+		var username=req.user.username;
+		var friend=req.body.friend;
 
+		var newFriend=new Friend({
+			Firstside: username,
+			Secondside: friend
+		});
+
+		newFriend.save().then(function(data){
+			console.log(data);
+		})
 	},
-	viewFriend:function(req,res){
-         console.log(req.session)
-          
-		/*knex('Freinds').where({Firstside:theuser,Secondside:friend})
-.orwhere({Firstside:theuser,Secondside:friend})
-.fetch().then(function(relation){
-	if(relation){
+	viewFriends:function(req,res,next){
+		var username=req.user.username;
 
+		db.knex.select().from('Friends').where({Firstside:username})
+		.then(function(relation){
+			if(relation){
+				console.log(relation);
+			}else{
+				res.json("this user have no friends");
+			}
+		});
+	},
+	show:function(req,res,next){
+		var username=req.user.username;
+
+		new User({username:username}).fetch().then(function(user){
+			if(!user){
+				res.json("not found")
+			}else{
+				res.json({uservalue:user});
+			}
+		})
 	}
-	else{
-		var newfriend =new friends({
-  	    Firstside :Firstside,
-     	Secondside:Secondside
-       })
-
-       newfriend.save().then(function(){
-  	//open the new friend 
-       })*/
-
-
-   }
-
-
-
-	
 }

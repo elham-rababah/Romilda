@@ -4,23 +4,10 @@
   <button class="button"type="button"  data-toggle="collapse" class="toggleButton" data-target="#writeNotes">Write a Note</button>
   <button class="button" type="button"  data-toggle="collapse" class="toggleButton" data-target="#myNotes">show Notes</button>
   
-
- 
-   <!--   <div id="myNotes" class="collapse">
-    <div class="mycolor myNotes" ng-repeat='data in Notes.data'>
-    <ul list-style: none;>
-      <div ng-repeat='d in data'>
-        <li>{{d['content']}}</li>
-    </div>
-    </ul>
-  </div>
--->
   <div id="myNotes" class="collapse" >
    <ul list-style: none;>
-  dfdf
-  <div class="mycolor myNotes" ng-repeat="note in notes">
-     <div ng-repeat='d in data'>
-
+  <div class="mycolor myNotes" ng-repeat="note in Notes.data">
+     <div ng-repeat='d in note'>
         <li>{{d['content']}}</li>
     </div>
 
@@ -38,7 +25,7 @@
       <h2>Write Your Note</h2>
         <div id="notes">
         <br><br>
-        <textarea style="background:transparent; border-width: 4px; border-color:rgb(131, 64, 10); font-size: 14pt;" rows="15" cols="45" ng-mode="memo"></textarea>
+        <textarea style="background:transparent; border-width: 4px; border-color:rgb(131, 64, 10); font-size: 14pt;" rows="15" cols="45" ng-model="memo"></textarea>
              <br><br><br>
            
         <button class="button" ng-click="save()" class="Notesbutton">Send</button>

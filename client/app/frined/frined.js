@@ -1,7 +1,7 @@
 angular.module('Memorize.frined', [])
 
-.controller('frinedController', function ($scope) {
-	$scope.frineds=[];
+.controller('frinedController', function ($scope , Friends) {
+	$scope.frined={};
 	$scope.sendToFrined=function(){
 
 	}
@@ -9,7 +9,7 @@ angular.module('Memorize.frined', [])
 	$scope.remove=function(){
 
 	}
-
-	
-
+	Friends.getFriends().then(function(data){
+		$scope.frined.all=data;
+	})
 });
