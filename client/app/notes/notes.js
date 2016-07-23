@@ -10,8 +10,8 @@ angular.module('Memorize.notes',[])
 		}
 		Notes.saveMemo(val)
 		.then(function(resp){
-			//resp.data=val;
-			console.log(res.data)
+			resp.data=val;
+			console.log(resp.data);
 		})
 	};
 
