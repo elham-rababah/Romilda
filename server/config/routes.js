@@ -1,6 +1,6 @@
 var controller = require('../dbController.js');
 var helpers = require('./helpers.js');
-var session = require('express-session');
+
 
 module.exports = function (app, express) {
 	 app.post('/api/signin', controller.signin);

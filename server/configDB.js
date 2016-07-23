@@ -10,7 +10,8 @@ var db = Bookshelf.initialize({
     database: 'Memorize',
     charset: 'utf8',
     filename: path.join(__dirname, '../db/Memorize.sqlite')
-  }
+  },
+  useNullAsDefault: true
 });
 
 db.knex.schema.hasTable('Users').then(function(exists) {
